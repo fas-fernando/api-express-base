@@ -1,7 +1,7 @@
 const router = require('express').Router();
 
-const TestController = require('@controller/test');
+const UserController = require('@controller/user');
 
-router.get('/', TestController.helloWorld);
+router.get('/users', UserController.getAll);
 
 module.exports = router;
