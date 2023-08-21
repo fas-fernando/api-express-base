@@ -19,6 +19,9 @@
     "@": "src",
     "@app": "src/app.js",
     "@config": "src/config",
-    "@controller": "src/controller"
+    "@controller": "src/controller",
+    "@model": "src/model",
+    "@helper": "src/helper",
+    "@service": "src/service"
   }
 }
