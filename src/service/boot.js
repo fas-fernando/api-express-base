@@ -1,5 +1,12 @@
 const server = require('@app');
 const config = require('@config');
+const connection = require('@db');
+
+connection.authenticate().then(() => {
+    console.log('Conexão com o banco de dados, ok');
+}).catch((err) => {
+    console.log(err);
+});
 
 module.exports = (error) => {
     if(error) {
