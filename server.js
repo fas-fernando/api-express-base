@@ -1,11 +1,11 @@
-const express = require('express');
-const app = express();
+require('dotenv').config();
+require('module-alias/register');
 
-app.use('/', (req, res) => {
-    res.send('Hello World');
-});
+const config = require('@config');
+const server = require('@app');
 
-app.listen(3000, (err) => {
+
+server.listen(config.app.port, (err) => {
     if(err) {
         console.log(err);
     } else {
